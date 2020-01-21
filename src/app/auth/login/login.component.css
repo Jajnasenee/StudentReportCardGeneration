@@ -1,0 +1,20 @@
+/* .links a::after{
+border-bottom: 2px solid orangered;
+} */
+.links a{
+    color:black;
+    text-decoration: none;
+}
+
+.bg{
+    background: url(../../../assets/K4K_BG.jpg) no-repeat scroll;
+    background-size: cover;   
+    background-position: center; 
+    height: 100vh;
+}
+.loginBtn{
+    border-radius: 50px;
+    padding: 0.2em 2em;
+    background: linear-gradient(to right, #f54f6c 0%, #d458b8 100%);
+    color: #fff;
+}
