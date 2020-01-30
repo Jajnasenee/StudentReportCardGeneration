@@ -1,3 +1,5 @@
+import { UnitsComponent } from './units/units.component';
+import { StreamComponent } from './stream/stream.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { LoginComponent } from './auth/login/login.component';
 import { NgModule } from '@angular/core';
@@ -12,6 +14,14 @@ const routes: Routes = [
   {
     path: 'portfolio',
     component: PortfolioComponent
+  },
+  {
+    path: 'stream',
+    component: StreamComponent
+  },
+  {
+    path: 'units',
+    component: UnitsComponent
   },
   {
     path: '',

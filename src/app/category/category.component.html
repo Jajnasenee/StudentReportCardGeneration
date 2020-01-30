@@ -1,0 +1,30 @@
+<div class="container-fluid bg">
+    <div class="container">
+        <div class="row pl-5 pr-5 pt-5">
+            <div class="col-sm-8 links">
+                <a routerLink="/login" style="border-bottom: 2px solid #f37e21;">login</a><br>
+                <a routerLink="/portfolio" style="border-bottom: 2px solid #f37e21;">What is a portfolio?</a><br>
+                <a routerLink="/stream" style="border-bottom: 2px solid #f37e21;">Overview of STREAM</a><br>
+                <a routerLink="/units">Overview Of Units</a>
+            </div>
+            <div class="col-sm-4">
+                <img src="./../../../assets/K4K_LOGO.png" class="img-fluid">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-6">
+                <h2 class="heading">{{categories.cate_name}}</h2>
+                <p style="white-space: pre-line;font-size: 13.5px;color: #000;">
+                    {{categories.cate_desc}}
+                </p>
+            </div>
+            <div class="col-sm-1">
+
+            </div>
+            <div class="col-sm-5">
+                <img src="{{categories.cate_img}}" width="300" height="300" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
