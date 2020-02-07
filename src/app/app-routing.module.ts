@@ -1,4 +1,7 @@
-import { SuperAdminComponent } from './super-admin/super-admin.component';
+import { StudentComponent } from './student/student.component';
+import { TeacherComponent } from './teacher/teacher.component';
+import { HocComponent } from './hoc/hoc.component';
+import { BranchesComponent } from './branches/branches.component';
 import { UnitsComponent } from './units/units.component';
 import { StreamComponent } from './stream/stream.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
@@ -27,8 +30,20 @@ const routes: Routes = [
     component: UnitsComponent
   },
   {
-    path: 'home',
-    component: SuperAdminComponent
+    path: 'branches-SuperAdmin',
+    component: BranchesComponent
+  },
+  {
+    path: 'hoc-SuperAdmin',
+    component: HocComponent
+  },
+  {
+    path: 'teacher-SuperAdmin',
+    component: TeacherComponent
+  },
+  {
+    path: 'student-SuperAdmin',
+    component: StudentComponent
   },
   {
     path: '',

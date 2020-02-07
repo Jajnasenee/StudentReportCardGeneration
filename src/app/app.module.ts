@@ -13,8 +13,12 @@ import { CategoryComponent } from './category/category.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { StreamComponent } from './stream/stream.component';
 import { UnitsComponent } from './units/units.component';
-import { SuperAdminComponent } from './super-admin/super-admin.component';
+
 import { environment } from 'src/environments/environment';
+import { BranchesComponent } from './branches/branches.component';
+import { HocComponent } from './hoc/hoc.component';
+import { StudentComponent } from './student/student.component';
+import { TeacherComponent } from './teacher/teacher.component';
 
 
 
@@ -26,7 +30,11 @@ import { environment } from 'src/environments/environment';
     PortfolioComponent,
     StreamComponent,
     UnitsComponent,
-    SuperAdminComponent,
+    BranchesComponent,
+    HocComponent,
+    StudentComponent,
+    TeacherComponent,
+    
   ],
   imports: [
     BrowserModule,
