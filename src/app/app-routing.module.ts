@@ -8,48 +8,75 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { LoginComponent } from './auth/login/login.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+// import { AngularFireAuthGuard } from '@angular/fire/auth-guard';
+import { ApplayoutComponent } from './_layout/applayout/applayout.component';
 
 
 
 
 const routes: Routes = [
+
+  {
+    path: '',
+    redirectTo: '/login',
+    pathMatch: 'full'
+  },
+
+  //Site routes goes here 
+  {
+    path: '',
+    component: ApplayoutComponent,
+    children: [
+      {
+        path: 'branches',
+        component: BranchesComponent,
+        // canActivate: [AngularFireAuthGuard]
+      },
+      {
+        path: 'hoc',
+        component: HocComponent,
+        // canActivate: [AngularFireAuthGuard]
+      },
+      {
+        path: 'teacher',
+        component: TeacherComponent,
+        // canActivate: [AngularFireAuthGuard]
+      },
+      {
+        path: 'student',
+        component: StudentComponent,
+        // canActivate: [AngularFireAuthGuard]
+      },
+
+    ]
+  },
+  //no layout routes
   {
     path: 'login',
     component: LoginComponent
   },
   {
     path: 'portfolio',
-    component: PortfolioComponent
+    component: PortfolioComponent,
+    // canActivate: [AngularFireAuthGuard]
   },
   {
     path: 'stream',
-    component: StreamComponent
+    component: StreamComponent,
+    // canActivate: [AngularFireAuthGuard]
   },
   {
     path: 'units',
-    component: UnitsComponent
+    component: UnitsComponent,
+    // canActivate: [AngularFireAuthGuard]
   },
-  {
-    path: 'branches-SuperAdmin',
-    component: BranchesComponent
-  },
-  {
-    path: 'hoc-SuperAdmin',
-    component: HocComponent
-  },
-  {
-    path: 'teacher-SuperAdmin',
-    component: TeacherComponent
-  },
-  {
-    path: 'student-SuperAdmin',
-    component: StudentComponent
-  },
-  {
-    path: '',
-    redirectTo: '/login',
-    pathMatch: 'full'
-  }
+
+  // {
+  //   path: 'register',
+  //   component: RegisterComponent
+  // },
+  // otherwise redirect to home
+  // { path: '**', redirectTo: '' }
 
 ];
 
