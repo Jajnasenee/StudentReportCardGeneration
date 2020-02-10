@@ -22,26 +22,27 @@ export class AuthService {
     private db: AngularFirestore,
     private router: Router) { }
 
-  
-  // getUserState() {
-  //   return this.afAuth.authState;
-  // }
 
-  login(email: string, password: string) {
-    // this.afAuth.auth.signInWithEmailAndPassword(email, password)
-    //   .catch(error => {
-    //     this.eventAuthError.next(error);
-    //   })
-    //   .then(userCredential => {
-    //     if (userCredential) {
-    //       this.router.navigate(['/home']);
-    //     }
-    //   })
-    
+  getUserState() {
+    return this.afAuth.authState;
   }
 
-  // logout() {
-  //   this.afAuth.auth.signOut();
-  // }
+  login(email: string, password: string) {
+
+    this.afAuth.auth.signInWithEmailAndPassword(email, password)
+      .catch(error => {
+        this.eventAuthError.next(error);
+      })
+
+      .then(userCredential => {
+        if (userCredential) {
+          this.router.navigate(['/branches']);
+        }
+      })
+  }
+  logout() {
+    this.afAuth.auth.signOut();
+  }
+
 
 }

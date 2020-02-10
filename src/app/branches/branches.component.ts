@@ -1,5 +1,6 @@
-import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { AddComponent } from './add/add.component';
 
 @Component({
   selector: 'app-branches',
@@ -8,20 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BranchesComponent implements OnInit {
 
-  constructor(private router: Router) { }
-  showBranches() {
-    this.router.navigate(['/branches-SuperAdmin'])
-  }
-  showHoc() {
-    this.router.navigate(['/hoc-SuperAdmin']);
-  }
-  showTeacher(){
-    this.router.navigate(['/teacher-SuperAdmin']);
-  }
-  showStudent(){
-    this.router.navigate(['/student-SuperAdmin']);
-  }
+  constructor(private modalService: NgbModal) { }
 
+  open() {
+    const modalRef = this.modalService.open(AddComponent);
+    // modalRef.componentInstance.name = 'Asif';
+  }
   ngOnInit() {
   }
 

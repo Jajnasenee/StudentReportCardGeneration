@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
@@ -19,6 +20,10 @@ import { BranchesComponent } from './branches/branches.component';
 import { HocComponent } from './hoc/hoc.component';
 import { StudentComponent } from './student/student.component';
 import { TeacherComponent } from './teacher/teacher.component';
+import { TableComponent } from './components/table/table.component';
+import { ApplayoutComponent } from './_layout/applayout/applayout.component';
+import { PubliclayoutComponent } from './_layout/publiclayout/publiclayout.component';
+import { AddComponent } from './branches/add/add.component';
 
 
 
@@ -34,7 +39,11 @@ import { TeacherComponent } from './teacher/teacher.component';
     HocComponent,
     StudentComponent,
     TeacherComponent,
-    
+    TableComponent,
+    ApplayoutComponent,
+    PubliclayoutComponent,
+    AddComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -42,9 +51,10 @@ import { TeacherComponent } from './teacher/teacher.component';
     FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    NgbModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, AddComponent]
 })
 export class AppModule { }

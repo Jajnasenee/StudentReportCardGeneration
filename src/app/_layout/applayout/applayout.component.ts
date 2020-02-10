@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-applayout',
+  templateUrl: './applayout.component.html',
+  styleUrls: ['./applayout.component.css']
 })
-export class AppComponent {
+export class ApplayoutComponent {
+
   currentUrl = '';
   constructor(private router: Router) {
     this.router.events.subscribe((res) => {
@@ -36,7 +37,7 @@ export class AppComponent {
       availableRoles: ['superAdmin', 'admin', 'user']
     }
   ];
-  
+
 
 
   public navigateTo(nav) {
