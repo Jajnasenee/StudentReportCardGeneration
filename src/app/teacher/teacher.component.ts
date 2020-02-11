@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./teacher.component.css']
 })
 export class TeacherComponent implements OnInit {
+  public tabledata = ["Name", "Email", "Phone no.", "Branch", "Class", "Emp.Id","Action"]
 
   constructor(private router: Router) { }
   showBranches() {

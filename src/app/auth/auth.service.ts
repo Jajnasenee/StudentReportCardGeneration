@@ -23,19 +23,21 @@ export class AuthService {
     return this.afAuth.authState;
   }
 
-  login( email: string, password: string) {
+  login(email: string, password: string) {
     this.afAuth.auth.signInWithEmailAndPassword(email, password)
       .catch(error => {
         this.eventAuthError.next(error);
       })
       .then(userCredential => {
-        if(userCredential) {
+        if (userCredential) {
           this.router.navigate(['/branches']);
         }
       })
-  }  
+  }
+
 
   logout() {
+    this.router.navigate(['/login']);
     return this.afAuth.auth.signOut();
   }
 }

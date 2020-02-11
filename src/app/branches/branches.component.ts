@@ -15,6 +15,10 @@ export class BranchesComponent implements OnInit {
     const modalRef = this.modalService.open(AddComponent);
     // modalRef.componentInstance.name = 'Asif';
   }
+
+  public tabledata = ["Branch Name", "Location", "Hoc", "Email", "Phone no.", "Action"]
+
+
   ngOnInit() {
   }
 

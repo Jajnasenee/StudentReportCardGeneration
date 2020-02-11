@@ -20,10 +20,10 @@ import { BranchesComponent } from './branches/branches.component';
 import { HocComponent } from './hoc/hoc.component';
 import { StudentComponent } from './student/student.component';
 import { TeacherComponent } from './teacher/teacher.component';
-import { TableComponent } from './components/table/table.component';
 import { ApplayoutComponent } from './_layout/applayout/applayout.component';
 import { PubliclayoutComponent } from './_layout/publiclayout/publiclayout.component';
 import { AddComponent } from './branches/add/add.component';
+import { TablesComponent } from './tables/tables.component';
 
 
 
@@ -39,10 +39,10 @@ import { AddComponent } from './branches/add/add.component';
     HocComponent,
     StudentComponent,
     TeacherComponent,
-    TableComponent,
     ApplayoutComponent,
     PubliclayoutComponent,
     AddComponent,
+    TablesComponent,
 
   ],
   imports: [

@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 export class HocComponent implements OnInit {
 
   constructor(private router: Router) { }
+  public tabledata = ["Name", "Email", "Phone no.", "Branch", "Adress", "Action"]
+
   showBranches() {
     this.router.navigate(['/branches-SuperAdmin'])
   }

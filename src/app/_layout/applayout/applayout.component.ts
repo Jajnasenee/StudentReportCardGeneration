@@ -9,9 +9,11 @@ import { AuthService } from 'src/app/auth/auth.service';
 })
 export class ApplayoutComponent {
 
-  
+  user: firebase.User;
+
+
   currentUrl = '';
-  constructor(private router: Router,private auth: AuthService) {
+  constructor(private router: Router, private auth: AuthService) {
     this.router.events.subscribe((res) => {
       this.currentUrl = this.router.url;
     })
@@ -39,6 +41,15 @@ export class ApplayoutComponent {
       availableRoles: ['superAdmin', 'admin', 'user']
     }
   ];
+
+
+  ngOnInit() {
+    this.auth.getUserState()
+      .subscribe(user => {
+        this.user = user;
+      })
+  }
+
 
   logout() {
     this.auth.logout();

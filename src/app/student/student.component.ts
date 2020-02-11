@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./student.component.css']
 })
 export class StudentComponent implements OnInit {
+  public tabledata = ["Roll No.", "Name", "Class", "Branch", "Academic Year","Gender","Dob", "Action"]
 
   constructor(private router: Router) { }
   showBranches() {
