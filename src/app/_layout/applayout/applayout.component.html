@@ -15,7 +15,7 @@
                         <h2 style="font-weight: 400;">Welcome to Kara4kids</h2>
                     </div>
                     <div class="col-2 ml-auto">
-                        <button class="btn button border">Logout</button>
+                        <button class="btn button border" *ngIf="!user" (click)="logout()">Logout</button>
                     </div>
                 </div>
                 <div class="row">

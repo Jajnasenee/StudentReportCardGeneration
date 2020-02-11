@@ -9,6 +9,8 @@ import { AuthService } from 'src/app/auth/auth.service';
 })
 export class ApplayoutComponent {
 
+  user: firebase.User;
+
   currentUrl = '';
   constructor(private router: Router, private auth: AuthService) {
     this.router.events.subscribe((res) => {
@@ -38,7 +40,6 @@ export class ApplayoutComponent {
       availableRoles: ['superAdmin', 'admin', 'user']
     }
   ];
-
 
   logout() {
     this.auth.logout();

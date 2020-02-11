@@ -15,6 +15,13 @@ import { ApplayoutComponent } from './_layout/applayout/applayout.component';
 
 
 const routes: Routes = [
+
+  {
+    path: '',
+    redirectTo: '/login',
+    pathMatch: 'full'
+  },
+
   //Site routes goes here 
   {
     path: '',
@@ -44,7 +51,10 @@ const routes: Routes = [
     ]
   },
   //no layout routes
-  { path: 'login', component: LoginComponent },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
   {
     path: 'portfolio',
     component: PortfolioComponent,
@@ -62,13 +72,11 @@ const routes: Routes = [
   },
 
   // {
-  //   path: '',
-  //   redirectTo: '/login',
-  //   pathMatch: 'full'
+  //   path: 'register',
+  //   component: RegisterComponent
   // },
-  // { path: 'register', component: RegisterComponent },
   // otherwise redirect to home
-  { path: '**', redirectTo: '' }
+  // { path: '**', redirectTo: '' }
 
 ];
 
