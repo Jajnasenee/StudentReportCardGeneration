@@ -12,7 +12,7 @@ export class BranchesComponent implements OnInit {
   constructor(private modalService: NgbModal) { }
 
   open() {
-    const modalRef = this.modalService.open(AddComponent);
+    const modalRef = this.modalService.open(AddComponent, { centered: true });
     // modalRef.componentInstance.name = 'Asif';
   }
 

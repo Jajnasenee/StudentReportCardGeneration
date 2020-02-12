@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
+import { AddHocComponent } from './add-hoc/add-hoc.component';
 
 @Component({
   selector: 'app-hoc',
@@ -8,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class HocComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private modalService: NgbModal) { }
   public tabledata = ["Name", "Email", "Phone no.", "Branch", "Adress", "Action"]
 
   showBranches() {
@@ -23,7 +25,10 @@ export class HocComponent implements OnInit {
   showStudent() {
     this.router.navigate(['/student-SuperAdmin']);
   }
-
+  open() {
+    const modalRef = this.modalService.open(AddHocComponent, { centered: true });
+    // modalRef.componentInstance.name = 'Asif';
+  }
 
   ngOnInit() {
   }

@@ -1,0 +1,12 @@
+.button{
+    border-radius: 50px;
+    padding: 0.2em 1em;
+    background: linear-gradient(to right, #f54f6c 0%, #d458b8 100%);
+    color: #fff;
+}
+.buttons{
+    border-radius: 50px;
+    padding: 0.2em 1em;
+    background: linear-gradient(to right, #6E99FE 0%, #5ACCAD 100%);
+    color: #fff;
+}

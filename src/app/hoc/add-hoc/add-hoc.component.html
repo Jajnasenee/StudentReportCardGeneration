@@ -8,22 +8,17 @@
     <form #addBranchForm="ngForm" (ngSubmit)="login(addBranchForm)">
         <div class="row">
             <div class="col-12">
-                <label for="branchname">Branch Name</label>
-                <input ngModel #branchName="ngModel" name="branchname" type="text" class="form-control">
+                <label for="name">Name</label>
+                <input ngModel #name="ngModel" name="name" type="text" class="form-control">
             </div>
         </div>
         <div class="row">
             <div class="col-12">
-                <label for="location">Location</label>
-                <input ngModel #location="ngModel" name="location" type="text" class="form-control">
+                <label for="branch">Branch</label>
+                <input ngModel #branch="ngModel" name="branch" type="text" class="form-control">
             </div>
         </div>
-        <div class="row">
-            <div class="col-12">
-                <label for="hoc">Hoc</label>
-                <input ngModel #hoc="ngModel" name="hoc" type="text" class="form-control">
-            </div>
-        </div>
+
         <div class="row">
             <div class="col-12">
                 <label for="email">E-mail</label>
@@ -36,11 +31,17 @@
                 <input ngModel #phone="ngModel" name="phone" type="tel" class="form-control">
             </div>
         </div>
+        <div class="row">
+            <div class="col-12">
+                <label for="adress">Address</label>
+                <textarea ngModel #adress="ngModel" name="adress" class="form-control"></textarea>
+            </div>
+        </div>
         <br>
         <div class="row text-center">
             <div class="col-12">
                 <button type="reset" class="btn button mr-2" value="Reset">Reset</button>
-                <button type="button" class="btn buttons" >Add</button>
+                <button type="button" class="btn buttons">Add</button>
 
             </div>
         </div>

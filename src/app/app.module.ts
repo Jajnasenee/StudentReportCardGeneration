@@ -24,6 +24,9 @@ import { ApplayoutComponent } from './_layout/applayout/applayout.component';
 import { PubliclayoutComponent } from './_layout/publiclayout/publiclayout.component';
 import { AddComponent } from './branches/add/add.component';
 import { TablesComponent } from './tables/tables.component';
+import { AddHocComponent } from './hoc/add-hoc/add-hoc.component';
+import { AddTeacherComponent } from './teacher/add-teacher/add-teacher.component';
+import { AddStudentComponent } from './student/add-student/add-student.component';
 
 
 
@@ -43,6 +46,9 @@ import { TablesComponent } from './tables/tables.component';
     PubliclayoutComponent,
     AddComponent,
     TablesComponent,
+    AddHocComponent,
+    AddTeacherComponent,
+    AddStudentComponent,
 
   ],
   imports: [
@@ -55,6 +61,6 @@ import { TablesComponent } from './tables/tables.component';
     NgbModule
   ],
   providers: [],
-  bootstrap: [AppComponent, AddComponent]
+  bootstrap: [AppComponent, AddComponent, AddHocComponent, AddTeacherComponent, AddStudentComponent]
 })
 export class AppModule { }
