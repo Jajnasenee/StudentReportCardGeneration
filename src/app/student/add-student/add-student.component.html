@@ -5,7 +5,7 @@
     </button>
 </div>
 <div class="modal-body">
-    <form #addBranchForm="ngForm" (ngSubmit)="login(addBranchForm)">
+    <form #addStudentForm="ngForm" (ngSubmit)="addStudent(addStudentForm)">
         <div class="row">
             <div class="col-12">
                 <label for="rollno">Roll No.</label>
@@ -63,7 +63,7 @@
         <div class="row text-center">
             <div class="col-12">
                 <button type="reset" class="btn button mr-2" value="Reset">Reset</button>
-                <button type="button" class="btn buttons">Add</button>
+                <button type="submit" class="btn buttons">Add</button>
 
             </div>
         </div>
