@@ -27,6 +27,7 @@ import { TablesComponent } from './tables/tables.component';
 import { AddHocComponent } from './hoc/add-hoc/add-hoc.component';
 import { AddTeacherComponent } from './teacher/add-teacher/add-teacher.component';
 import { AddStudentComponent } from './student/add-student/add-student.component';
+import { AddRcComponent } from './student/add-rc/add-rc.component';
 
 
 
@@ -49,6 +50,7 @@ import { AddStudentComponent } from './student/add-student/add-student.component
     AddHocComponent,
     AddTeacherComponent,
     AddStudentComponent,
+    AddRcComponent,
 
   ],
   imports: [

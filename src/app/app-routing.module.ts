@@ -1,3 +1,4 @@
+import { AddRcComponent } from './student/add-rc/add-rc.component';
 import { StudentComponent } from './student/student.component';
 import { TeacherComponent } from './teacher/teacher.component';
 import { HocComponent } from './hoc/hoc.component';
@@ -45,6 +46,11 @@ const routes: Routes = [
       {
         path: 'student',
         component: StudentComponent,
+        // canActivate: [AngularFireAuthGuard]
+      },
+      {
+        path: 'add-rc',
+        component: AddRcComponent,
         // canActivate: [AngularFireAuthGuard]
       },
 
