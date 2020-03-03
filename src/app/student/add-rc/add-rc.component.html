@@ -1,11 +1,12 @@
-<form #reportCardForm="ngForm" (ngSubmit)="addRc(reportCardForm)">
+<div class="container">
+    <form #reportCardForm="ngForm" (ngSubmit)="addRc(reportCardForm)">
 
-    <div class="row" *ngIf="authError">
-        <div class="col-12 alert alert-danger">{{ authError?.message }}</div>
-    </div>
+        <div class="row" *ngIf="authError">
+            <div class="col-12 alert alert-danger">{{ authError?.message }}</div>
+        </div>
 
-    <div class="row">
-        <div class="col-6">
+        <div class="row">
+            <div class="col-6">
                 <label for="name">Name</label>
                 <input ngModel #name="ngModel" name="name" type="text" class="form-control">
             </div>
@@ -99,8 +100,8 @@
                         <input type="file" class="form-control" accept="image/png, image/jpeg">
                     </div>
                 </div>
-                <label for="favStory">Anecdote/Teacher comment</label>
-                <textarea ngModel #favstory="ngModel" rows="4" class="form-control"></textarea>
+                <label for="science">Anecdote/Teacher comment</label>
+                <textarea ngModel #science="ngModel" rows="4" class="form-control"></textarea>
             </div>
             <div class="col-6">
                 <h5>Technology</h5>
@@ -110,9 +111,9 @@
                     and other tactile agents offer the child an opportunity to be an active participant in the learning
                     process.
                 </p>
-                <textarea ngModel #technology="ngModel" rows="4" class="form-control"
+                <textarea ngModel #tech="ngModel" rows="4" class="form-control"
                     placeholder="Activities in Technology"></textarea>
-                <textarea ngModel #favstory="ngModel" rows="4" class="form-control"
+                <textarea ngModel #techActivities="ngModel" rows="4" class="form-control"
                     placeholder="Write about child’s learnings or response to activities"></textarea>
 
                 <div class="row">
@@ -130,7 +131,7 @@
                     </div>
                 </div>
                 <label for="favStory">Anecdote/Teacher comment</label>
-                <textarea ngModel #favstory="ngModel" rows="4" class="form-control"></textarea>
+                <textarea ngModel #technology="ngModel" rows="4" class="form-control"></textarea>
             </div>
             <div class="col-6">
                 <h5>Research</h5>
@@ -139,8 +140,69 @@
                     child is catered through the activities that support the need of acquiring information. The age
                     appropriate research based activities lead the child towards understanding a topic/theme in detail
                 </p>
-                <textarea ngModel #technology="ngModel" rows="4" class="form-control"
+                <textarea ngModel #research="ngModel" rows="4" class="form-control"
                     placeholder="Activities in research"></textarea>
+                <textarea ngModel #researchActivities="ngModel" rows="4" class="form-control"
+                    placeholder="Write about child’s learnings or response to activities"></textarea>
+
+                <div class="row">
+                    <div class="col-12">
+                        <h6> Upload Pictures</h6>
+                    </div>
+                    <div class="col-4">
+                        <input type="file" class="form-control" accept="image/png, image/jpeg">
+                    </div>
+                    <div class="col-4">
+                        <input type="file" class="form-control" accept="image/png, image/jpeg">
+                    </div>
+                    <div class="col-4">
+                        <input type="file" class="form-control" accept="image/png, image/jpeg">
+                    </div>
+                </div>
+                <label for="favStory">Anecdote/Teacher comment</label>
+                <textarea ngModel #teachercomment="ngModel" rows="4" class="form-control"></textarea>
+            </div>
+            <div class="col-6">
+                <h5>Environment</h5>
+                <p>
+                    At this age, the child is still expanding his horizons. Activities in this area gives a lot of
+                    opportunities to explore his comfort zone with his social group, his area outside his immediate &
+                    extended family, associate himself to the world he is a part of etc. Child is given support to
+                    recognize, understand and manage his emotions to be a part of this social world.
+                </p>
+                <textarea ngModel #environment="ngModel" rows="4" class="form-control"
+                    placeholder="Activities in enviroment"></textarea>
+                <textarea ngModel #aboutEnvironment="ngModel" rows="4" class="form-control"
+                    placeholder="Write about child’s learnings or response to activities"></textarea>
+
+                <div class="row">
+                    <div class="col-12">
+                        <h6> Upload Pictures</h6>
+                    </div>
+                    <div class="col-4">
+                        <input type="file" class="form-control" accept="image/png, image/jpeg">
+                    </div>
+                    <div class="col-4">
+                        <input type="file" class="form-control" accept="image/png, image/jpeg">
+                    </div>
+                    <div class="col-4">
+                        <input type="file" class="form-control" accept="image/png, image/jpeg">
+                    </div>
+                </div>
+                <label for="favStory">Anecdote/Teacher comment</label>
+                <textarea ngModel #envComment="ngModel" rows="4" class="form-control"></textarea>
+            </div>
+            <div class="col-6">
+                <h5>Arts/Language Arts</h5>
+                <p>
+                    Art is a mode of communication which allows each one to express and develop ideas. It is an array of
+                    activities that foster intellectual benefits along with their creative significance.
+                    Self-confidence, language skills, communication skills, social and emotional skills are developed
+                    through these set of activities.
+                </p>
+                <textarea ngModel #technology="ngModel" rows="5" cols="50" class="form-control">Activities done for language & art development: 
+                    Theatre, role play, music and rhythm, imaginative play, reading programs, stories, rhymes, group discussions etc. The list of opportunities are endless with language and art development activities.
+                </textarea>
                 <textarea ngModel #favstory="ngModel" rows="4" class="form-control"
                     placeholder="Write about child’s learnings or response to activities"></textarea>
 
@@ -162,28 +224,575 @@
                 <textarea ngModel #favstory="ngModel" rows="4" class="form-control"></textarea>
             </div>
             <div class="col-6">
-            <label for="password">Class</label>
-            <input ngModel #password="ngModel" name="password" type="password" class="form-control">
-        </div>
-    </div>
+                <h5>Manipulatives</h5>
+                <p>
+                    Math is one of the prime most significant life skills that one can impart. Child is taken through an
+                    experience of understanding various concepts through educational materials. Child gets to see, feel,
+                    understand, compare, sort, categorize, and quantify all information needed through tangible items.
+                    He gets to form patterns, classify items, and identify shapes through various activities presented
+                    to him.
+                </p>
+                <textarea ngModel #manipulatives="ngModel" rows="5" cols="50" class="form-control"
+                    placeholder="Activities in manipulatives"></textarea>
+                <textarea ngModel #aboutManipulatives="ngModel" rows="4" class="form-control"
+                    placeholder="Write about child’s learnings or response to activities"></textarea>
 
-    <div class="row">
-        <div class="col-6">
-            <label for="password">Roll No</label>
-            <input ngModel #password="ngModel" name="password" type="password" class="form-control">
-        </div> <div class="col-6">
-            <label for="password">Acadefmic Year</label>
-            <input ngModel #password="ngModel" name="password" type="password" class="form-control">
+                <div class="row">
+                    <div class="col-12">
+                        <h6> Upload Pictures</h6>
+                    </div>
+                    <div class="col-4">
+                        <input type="file" class="form-control" accept="image/png, image/jpeg">
+                    </div>
+                    <div class="col-4">
+                        <input type="file" class="form-control" accept="image/png, image/jpeg">
+                    </div>
+                    <div class="col-4">
+                        <input type="file" class="form-control" accept="image/png, image/jpeg">
+                    </div>
+                </div>
+                <label for="favStory">Anecdote/Teacher comment</label>
+                <textarea ngModel #manipulativeComment="ngModel" rows="4" class="form-control"></textarea>
+            </div>
         </div>
-    </div>
+        <br>
+        <div class="row">
+            <div class="col-12">
+                <h5><u>PSYCHOMOTOR DOMAIN</u></h5>
+                <h5>Psychomotor</h5>
+                <p>
+                    This refers to the skill of physical response to the situation the child is in. Psychomotor reflects
+                    the brain’s interaction with the environment. It can be categorized to gross motor development and
+                    fine motor development. The large body movements which involves the whole body, such as jumping,
+                    running, standing, balancing etc., are gross motor movements. Fine motor movements are the small
+                    body movements with fingers, wrist, hands, feet and toes.
+                </p>
+                <textarea ngModel #psychomotor="ngModel" rows="4" class="form-control"
+                    placeholder="List out Activities done in Motor skills development"></textarea>
+                <textarea ngModel #abtpsychomotor="ngModel" rows="4" class="form-control"
+                    placeholder="Write about child’s response to activities done in fine and gross motor development and child’s response to it."></textarea>
+                <div class="row">
+                    <div class="col-12">
+                        <h6> Upload Pictures</h6>
+                    </div>
+                    <div class="col-4">
+                        <input type="file" class="form-control" accept="image/png, image/jpeg">
+                    </div>
+                    <div class="col-4">
+                        <input type="file" class="form-control" accept="image/png, image/jpeg">
+                    </div>
+                    <div class="col-4">
+                        <input type="file" class="form-control" accept="image/png, image/jpeg">
+                    </div>
+                </div>
+                <label for="favStory">Anecdote/Teacher comment</label>
+                <textarea ngModel #psychomotorcomment="ngModel" rows="4" class="form-control"></textarea>
+            </div>
 
-    <div class="row pt-4 text-center">
-        <!-- <div class="col-12">
-            <a href="/register">Click here to register</a>
-        </div> -->
-        <div class="col-12">
-            <button class="btn loginBtn border" type="submit">Login</button>
         </div>
-    </div>
+        <br>
+        <div class="row">
+            <div class="col-12">
+                <h5><u>AFFECTIVE DOMAIN</u></h5>
+                <h5>Affective</h5>
+                <p>
+                    Learning is not just a cognitive function. It also attend to the affective domain built over a
+                    period of time. Affective domain talks about one’s emotions, feelings, attitudes, enthusiasm, and
+                    appreciation in a social structure. It covers, social-emotional- personal attributes. Exposure in
+                    this space concede the child to understand, manage and express his emotions rightfully.
+                </p>
+                <textarea ngModel #affective="ngModel" rows="4" class="form-control"
+                    placeholder="List out Activities done in PSED"></textarea>
+                <textarea ngModel #abtaffective="ngModel" rows="4" class="form-control"
+                    placeholder="Write about child’s response to activities done in personal, social and emotional development"></textarea>
+                <div class="row">
+                    <div class="col-12">
+                        <h6> Upload Pictures</h6>
+                    </div>
+                    <div class="col-6">
+                        <input type="file" class="form-control" accept="image/png, image/jpeg">
+                    </div>
+                    <div class="col-6">
+                        <input type="file" class="form-control" accept="image/png, image/jpeg">
+                    </div>
+                </div>
 
-</form>
+            </div>
+
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-12">
+                <h5><u>MY STAR REPORT</u></h5>
+                <p>Following are the detailed evaluation of __________________’s progress during __________________.
+                    Each gives a preview of__________________’s learning in the field of literacy, numeracy, science,
+                    physical, social & emotional development.
+                </p>
+                <h5>Numeracy</h5>
+            </div>
+            <div class="col-6">
+                <label for="numberConcept">1. He knows pre number concepts like long-short, thick-thin,
+                    big-small</label>
+                <div class="form-check">
+                    <input ngModel #numberConcept="ngModel" name="numberConcept" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #numberConcept="ngModel" name="numberConcept" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #numberConcept="ngModel" name="numberConcept" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+
+                <label for="numberConcept">2. He can Identify numbers 1- 9</label>
+                <div class="form-check">
+                    <input ngModel #identifynumber="ngModel" name="identifynumber" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #identifyNumber="ngModel" name="identifyNumber" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #identifyNumber="ngModel" name="identifyNumber" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio2">Guided</label>
+                </div>
+
+                <label for="numberConcept">3. He can identify and form patterns</label>
+                <div class="form-check">
+                    <input ngModel #formpatterns="ngModel" name="formpatterns" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #formpatterns="ngModel" name="formpatterns" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #formpatterns="ngModel" name="formpatterns" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+
+                <label for="numberConcept">4. He is able to identify basic 2D shapes such as triangle, square, circle,
+                    rectangle</label>
+                <div class="form-check">
+                    <input ngModel #shapes="ngModel" name="shapes" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #shapes="ngModel" name="shapes" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #shapes="ngModel" name="shapes" type="radio" class="form-check-input" value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+
+                <label for="numberConcept">5. He makes an attempt to count numbers in sequence</label>
+                <div class="form-check">
+                    <input ngModel #countNumber="ngModel" name="countNumber" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #countNumber="ngModel" name="countNumber" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #countNumber="ngModel" name="countNumber" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+            </div>
+            <div class="col-6">
+                <label for="numberConcept">6. He can classify items into its categories of same/different</label>
+                <div class="form-check">
+                    <input ngModel #classifyItems="ngModel" name="classifyItems" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #classifyItems="ngModel" name="classifyItems" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #classifyItems="ngModel" name="classifyItems" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio2">Guided</label>
+                </div>
+
+                <label for="numberConcept">7. He can identify variation in sizes</label>
+                <div class="form-check">
+                    <input ngModel #identifySizes="ngModel" name="identifySizes" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #identifySizes="ngModel" name="identifySizes" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #identifySizes="ngModel" name="identifySizes" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio2">Guided</label>
+                </div>
+
+                <label for="numberConcept">8. He is able to associate numbers to quantity</label>
+                <div class="form-check">
+                    <input ngModel #quantity="ngModel" name="quantity" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #quantity="ngModel" name="quantity" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #quantity="ngModel" name="quantity" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio2">Guided</label>
+                </div>
+
+                <label for="numberConcept">9. He can make comparison between quantities</label>
+                <div class="form-check">
+                    <input ngModel #quantities="ngModel" name="quantities" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #quantities="ngModel" name="quantities" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #quantities="ngModel" name="quantities" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio2">Guided</label>
+                </div>
+            </div>
+
+
+            <div class="col-12">
+                <br>
+                <h5>Literacy</h5>
+            </div>
+            <div class="col-6">
+                <label for="numberConcept">1. He listens attentively to stories & rhymes</label>
+                <div class="form-check">
+                    <input ngModel #stories="ngModel" name="stories" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #stories="ngModel" name="stories" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #stories="ngModel" name="stories" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+
+                <label for="numberConcept">2. He attempts to narrate stories or events in sequence </label>
+                <div class="form-check">
+                    <input ngModel #sequence="ngModel" name="sequence" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #sequence="ngModel" name="sequence" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #sequence="ngModel" name="sequence" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio2">Guided</label>
+                </div>
+
+                <label for="numberConcept">3. He is able to follow simple instructions</label>
+                <div class="form-check">
+                    <input ngModel #instruction="ngModel" name="instruction" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #instruction="ngModel" name="instruction" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #instruction="ngModel" name="instruction" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+
+                <label for="numberConcept">4. He is able to asks / answers ‘wh’ questions</label>
+                <div class="form-check">
+                    <input ngModel #questions="ngModel" name="questions" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #questions="ngModel" name="questions" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #questions="ngModel" name="questions" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+
+                <label for="numberConcept">5. He can associate phonic sounds to letters</label>
+                <div class="form-check">
+                    <input ngModel #letters="ngModel" name="letters" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #letters="ngModel" name="letters" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #letters="ngModel" name="letters" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+                <label for="numberConcept">6. He uses simple sentences and is able to make conversations</label>
+                <div class="form-check">
+                    <input ngModel #conversations="ngModel" name="conversations" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #conversations="ngModel" name="conversations" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #conversations="ngModel" name="conversations" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio2">Guided</label>
+                </div>
+
+                <label for="numberConcept">7. He is able to introduce himself using his name, age and gender</label>
+                <div class="form-check">
+                    <input ngModel #introduce="ngModel" name="introduce" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #introduce="ngModel" name="introduce" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #introduce="ngModel" name="introduce" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+
+                <label for="numberConcept">8. He can identify his name on books/cards</label>
+                <div class="form-check">
+                    <input ngModel #books="ngModel" name="books" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #books="ngModel" name="books" type="radio" class="form-check-input" value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #books="ngModel" name="books" type="radio" class="form-check-input" value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+
+                <label for="numberConcept">9. He is able to express his needs clearly</label>
+                <div class="form-check">
+                    <input ngModel #express="ngModel" name="express" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #express="ngModel" name="express" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #express="ngModel" name="express" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+            </div>
+            <div class="col-6">
+                <label for="numberConcept">10. He can manipulate writing tools with confidence</label>
+                <div class="form-check">
+                    <input ngModel #manipulate="ngModel" name="manipulate" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #manipulate="ngModel" name="manipulate" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #manipulate="ngModel" name="manipulate" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio2">Guided</label>
+                </div>
+
+                <label for="numberConcept">11. He makes an attempt to write letters with appropriate strokes</label>
+                <div class="form-check">
+                    <input ngModel #attempt="ngModel" name="attempt" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #attempt="ngModel" name="attempt" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #attempt="ngModel" name="attempt" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio2">Guided</label>
+                </div>
+
+                <label for="numberConcept">12. He is able to draw simple shapes/pictures</label>
+                <div class="form-check">
+                    <input ngModel #pictures="ngModel" name="pictures" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #pictures="ngModel" name="pictures" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #pictures="ngModel" name="pictures" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio2">Guided</label>
+                </div>
+
+                <label for="numberConcept">13. He can talk about weather, day, date</label>
+                <div class="form-check">
+                    <input ngModel #weather="ngModel" name="weather" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #weather="ngModel" name="weather" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #weather="ngModel" name="weather" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio2">Guided</label>
+                </div>
+
+                <label for="numberConcept">14. He makes an attempt to participate in group discussion</label>
+                <div class="form-check">
+                    <input ngModel #discussion="ngModel" name="discussion" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #discussion="ngModel" name="discussion" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #discussion="ngModel" name="discussion" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio2">Guided</label>
+                </div>
+
+                <label for="numberConcept">15. He is able to differentiate phonic sounds</label>
+                <div class="form-check">
+                    <input ngModel #sounds="ngModel" name="sounds" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #sounds="ngModel" name="sounds" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #sounds="ngModel" name="sounds" type="radio" class="form-check-input" value="Guided">
+                    <label class="form-check-label" for="inlineRadio2">Guided</label>
+                </div>
+
+
+                <label for="numberConcept">16. He displays interest towards stories and rhymes</label>
+                <div class="form-check">
+                    <input ngModel #interest="ngModel" name="interest" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #interest="ngModel" name="interest" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #interest="ngModel" name="interest" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio2">Guided</label>
+                </div>
+
+
+                <label for="numberConcept">17. He enjoys picture reading activity and attempts to have a conversation
+                    using picture</label>
+                <div class="form-check">
+                    <input ngModel #attempts="ngModel" name="attempts" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #attempts="ngModel" name="attempts" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #attempts="ngModel" name="attempts" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio2">Guided</label>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div class="row pt-4 text-center">
+            <!-- <div class="col-12">
+                        <a href="/register">Click here to register</a>
+                    </div> -->
+            <div class="col-12">
+                <button class="btn loginBtn border" type="submit">Submit</button>
+            </div>
+        </div>
+
+    </form>
+</div>

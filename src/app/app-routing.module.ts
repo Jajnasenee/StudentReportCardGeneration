@@ -48,11 +48,6 @@ const routes: Routes = [
         component: StudentComponent,
         // canActivate: [AngularFireAuthGuard]
       },
-      {
-        path: 'add-rc',
-        component: AddRcComponent,
-        // canActivate: [AngularFireAuthGuard]
-      },
 
     ]
   },
@@ -74,6 +69,11 @@ const routes: Routes = [
   {
     path: 'units',
     component: UnitsComponent,
+    // canActivate: [AngularFireAuthGuard]
+  },
+  {
+    path: 'add-rc',
+    component: AddRcComponent,
     // canActivate: [AngularFireAuthGuard]
   },
 
