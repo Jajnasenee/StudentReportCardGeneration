@@ -6,10 +6,162 @@
 
     <div class="row">
         <div class="col-6">
-            <label for="email">Name</label>
-            <input ngModel #email="ngModel" name="email" type="email" class="form-control">
+                <label for="name">Name</label>
+                <input ngModel #name="ngModel" name="name" type="text" class="form-control">
+            </div>
+            <div class="col-6">
+                <label for="class">Class</label>
+                <input ngModel #class="ngModel" name="class" type="text" class="form-control">
+            </div>
         </div>
-        <div class="col-6">
+
+        <div class="row">
+            <div class="col-6">
+                <label for="rollNo">Roll No</label>
+                <input ngModel #rollNo="ngModel" name="rollNo" type="text" class="form-control">
+            </div>
+            <div class="col-6">
+                <label for="academicYear">Academic Year</label>
+                <input ngModel #academicYear="ngModel" name="academicYear" type="text" class="form-control">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <label for="pic">Upload Picture</label>
+                <input type="file" class="form-control" accept="image/png, image/jpeg">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-12">
+                <h5><u>ALL ABOUT ME</u></h5>
+            </div>
+            <div class="col-6">
+                <label for="height">Height</label>
+                <input ngModel #height="ngModel" name="height" type="text" class="form-control" placeholder="(in ft.)">
+                <label for="weight">Weight</label>
+                <input ngModel #weight="ngModel" name="weight" type="text" class="form-control" placeholder="(in kg.)">
+                <label for="favColor">Favorite Color</label>
+                <input ngModel #favColor="ngModel" name="favColor" type="text" class="form-control">
+                <br>
+                <textarea ngModel #favcolor="ngModel" rows="4" class="form-control"
+                    placeholder="Write About Favorite Color"></textarea>
+
+                <label for="favShape">Favorite Shape</label>
+                <input ngModel #favShape="ngModel" name="favShape" type="text" class="form-control">
+                <br>
+                <textarea ngModel #favshape="ngModel" rows="4" class="form-control"
+                    placeholder="Write About Favorite Shape"></textarea>
+            </div>
+            <div class="col-6">
+                <label for="favRhyme">Favorite Rhyme</label>
+                <input ngModel #favRhyme="ngModel" name="favRhyme" type="text" class="form-control">
+                <br>
+                <textarea ngModel #favrhyme="ngModel" rows="4" class="form-control"
+                    placeholder="Write About Favorite Rhyme"></textarea>
+                <label for="favStory">Favorite Story</label>
+                <input ngModel #favStory="ngModel" name="favStory" type="text" class="form-control">
+                <br>
+                <textarea ngModel #favstory="ngModel" rows="4" class="form-control"
+                    placeholder="Write About Favorite Story"></textarea>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-12">
+                <h5><u>COGNITIVE DOMAIN</u></h5>
+            </div>
+            <div class="col-6">
+                <h5>Science</h5>
+                <p>
+                    Child is exposed to various community helpers who are an integral of our lives. Child was introduced
+                    to following helpers:
+                    <br>
+                    Policeman, Plumber, Mason, Baker/Chef, Driver, Shopkeeper, Cobbler, Farmer, Doctor, Nurse, Postman,
+                    Teacher, Pilot, Barber
+                </p>
+                <p>
+                    Child was taken through an experience of each community helper through various resources that
+                    facilitated learning through play. (Write about child’s learnings or response to activities)
+                </p>
+                <div class="row">
+                    <div class="col-12">
+                        <h6> Upload Pictures</h6>
+                    </div>
+                    <div class="col-4">
+                        <input type="file" class="form-control" accept="image/png, image/jpeg">
+                    </div>
+                    <div class="col-4">
+                        <input type="file" class="form-control" accept="image/png, image/jpeg">
+                    </div>
+                    <div class="col-4">
+                        <input type="file" class="form-control" accept="image/png, image/jpeg">
+                    </div>
+                </div>
+                <label for="favStory">Anecdote/Teacher comment</label>
+                <textarea ngModel #favstory="ngModel" rows="4" class="form-control"></textarea>
+            </div>
+            <div class="col-6">
+                <h5>Technology</h5>
+                <p>
+                    It is a tool to provide access to information to the child which might be otherwise invisible. It is
+                    a method of enabling the child to be an involved learner. This Kinesthetic activity through models
+                    and other tactile agents offer the child an opportunity to be an active participant in the learning
+                    process.
+                </p>
+                <textarea ngModel #technology="ngModel" rows="4" class="form-control"
+                    placeholder="Activities in Technology"></textarea>
+                <textarea ngModel #favstory="ngModel" rows="4" class="form-control"
+                    placeholder="Write about child’s learnings or response to activities"></textarea>
+
+                <div class="row">
+                    <div class="col-12">
+                        <h6> Upload Pictures</h6>
+                    </div>
+                    <div class="col-4">
+                        <input type="file" class="form-control" accept="image/png, image/jpeg">
+                    </div>
+                    <div class="col-4">
+                        <input type="file" class="form-control" accept="image/png, image/jpeg">
+                    </div>
+                    <div class="col-4">
+                        <input type="file" class="form-control" accept="image/png, image/jpeg">
+                    </div>
+                </div>
+                <label for="favStory">Anecdote/Teacher comment</label>
+                <textarea ngModel #favstory="ngModel" rows="4" class="form-control"></textarea>
+            </div>
+            <div class="col-6">
+                <h5>Research</h5>
+                <p>
+                    The child at this age is a bundle of curiosity, energy and excitement. This inquisitiveness in the
+                    child is catered through the activities that support the need of acquiring information. The age
+                    appropriate research based activities lead the child towards understanding a topic/theme in detail
+                </p>
+                <textarea ngModel #technology="ngModel" rows="4" class="form-control"
+                    placeholder="Activities in research"></textarea>
+                <textarea ngModel #favstory="ngModel" rows="4" class="form-control"
+                    placeholder="Write about child’s learnings or response to activities"></textarea>
+
+                <div class="row">
+                    <div class="col-12">
+                        <h6> Upload Pictures</h6>
+                    </div>
+                    <div class="col-4">
+                        <input type="file" class="form-control" accept="image/png, image/jpeg">
+                    </div>
+                    <div class="col-4">
+                        <input type="file" class="form-control" accept="image/png, image/jpeg">
+                    </div>
+                    <div class="col-4">
+                        <input type="file" class="form-control" accept="image/png, image/jpeg">
+                    </div>
+                </div>
+                <label for="favStory">Anecdote/Teacher comment</label>
+                <textarea ngModel #favstory="ngModel" rows="4" class="form-control"></textarea>
+            </div>
+            <div class="col-6">
             <label for="password">Class</label>
             <input ngModel #password="ngModel" name="password" type="password" class="form-control">
         </div>
