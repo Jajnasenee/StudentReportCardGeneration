@@ -1,7 +1,7 @@
 <div class="container">
     <form #reportCardForm="ngForm" (ngSubmit)="addRc(reportCardForm)">
 
-        <div class="row" *ngIf="authError">
+        <div class="row pt-2" *ngIf="authError">
             <div class="col-12 alert alert-danger">{{ authError?.message }}</div>
         </div>
 
@@ -782,6 +782,611 @@
                     <label class="form-check-label" for="inlineRadio2">Guided</label>
                 </div>
             </div>
+
+            <div class="col-12">
+                <br>
+                <h5>Science</h5>
+            </div>
+            <div class="col-6">
+                <label for="numberConcept">1. He is able to identify parts of body</label>
+                <div class="form-check">
+                    <input ngModel #body="ngModel" name="body" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #body="ngModel" name="body" type="radio" class="form-check-input" value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #body="ngModel" name="body" type="radio" class="form-check-input" value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+
+                <label for="numberConcept">2. He is aware and is able to express his favourites</label>
+                <div class="form-check">
+                    <input ngModel #favourites="ngModel" name="favourites" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #favourites="ngModel" name="favourites" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #favourites="ngModel" name="favourites" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+
+                <label for="numberConcept">3. He is confident with names of primary colors</label>
+                <div class="form-check">
+                    <input ngModel #colors="ngModel" name="colors" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #colors="ngModel" name="colors" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #colors="ngModel" name="colors" type="radio" class="form-check-input" value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+
+                <label for="numberConcept">4. He is aware of the significance of personal & social hygiene</label>
+                <div class="form-check">
+                    <input ngModel #hygiene="ngModel" name="hygiene" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #hygiene="ngModel" name="hygiene" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #hygiene="ngModel" name="hygiene" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+
+                <label for="numberConcept">5. He is mindful of junk and healthy food</label>
+                <div class="form-check">
+                    <input ngModel #healthy="ngModel" name="healthy" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #healthy="ngModel" name="healthy" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #healthy="ngModel" name="healthy" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+
+                <label for="numberConcept">6. He is conscious of water, its properties and significance</label>
+                <div class="form-check">
+                    <input ngModel #significance="ngModel" name="significance" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #significance="ngModel" name="significance" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #significance="ngModel" name="significance" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+
+                <label for="numberConcept">7. He is familiar with traffic signals and their importance</label>
+                <div class="form-check">
+                    <input ngModel #signals="ngModel" name="signals" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #signals="ngModel" name="signals" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #signals="ngModel" name="signals" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+            </div>
+            <div class="col-6">
+                <label for="numberConcept">8. He has good knowledge on various modes of transport</label>
+                <div class="form-check">
+                    <input ngModel #knowledge="ngModel" name="knowledge" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #knowledge="ngModel" name="knowledge" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #knowledge="ngModel" name="knowledge" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+
+                <label for="numberConcept">9. He is conscious of body parts of animals</label>
+                <div class="form-check">
+                    <input ngModel #animals="ngModel" name="animals" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #animals="ngModel" name="animals" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #animals="ngModel" name="animals" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+
+                <label for="numberConcept">10. Has knowledge of wild animals, domestic animals and their habitat</label>
+                <div class="form-check">
+                    <input ngModel #habitat="ngModel" name="habitat" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #habitat="ngModel" name="habitat" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #habitat="ngModel" name="habitat" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+
+                <label for="numberConcept">11. He explores the plants and is germination process aware of the</label>
+                <div class="form-check">
+                    <input ngModel #plants="ngModel" name="plants" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #plants="ngModel" name="plants" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #plants="ngModel" name="plants" type="radio" class="form-check-input" value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+
+                <label for="numberConcept">12. He is familiar with life cycle of a caterpillar</label>
+                <div class="form-check">
+                    <input ngModel #caterpillar="ngModel" name="caterpillar" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #caterpillar="ngModel" name="caterpillar" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #caterpillar="ngModel" name="caterpillar" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+
+                <label for="numberConcept">13. He seeks information on parts of plants and flowers</label>
+                <div class="form-check">
+                    <input ngModel #flowers="ngModel" name="flowers" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #flowers="ngModel" name="flowers" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #flowers="ngModel" name="flowers" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+
+            </div>
+
+            <div class="col-12">
+                <br>
+                <h5>Physical</h5>
+            </div>
+            <div class="col-6">
+                <label for="numberConcept">1. He can join dot to dot</label>
+                <div class="form-check">
+                    <input ngModel #dot="ngModel" name="dot" type="radio" class="form-check-input" value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #dot="ngModel" name="dot" type="radio" class="form-check-input" value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #dot="ngModel" name="dot" type="radio" class="form-check-input" value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+
+                <label for="numberConcept">2. He balances his body well </label>
+                <div class="form-check">
+                    <input ngModel #balances="ngModel" name="balances" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #balances="ngModel" name="balances" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #balances="ngModel" name="balances" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+
+                <label for="numberConcept">3. He can walk in a line</label>
+                <div class="form-check">
+                    <input ngModel #walk="ngModel" name="walk" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #walk="ngModel" name="walk" type="radio" class="form-check-input" value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #walk="ngModel" name="walk" type="radio" class="form-check-input" value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+
+                <label for="numberConcept">4. He enjoys music & movement sessions</label>
+                <div class="form-check">
+                    <input ngModel #music="ngModel" name="music" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #music="ngModel" name="music" type="radio" class="form-check-input" value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #music="ngModel" name="music" type="radio" class="form-check-input" value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+
+                <label for="numberConcept">5. He can throw & catch a ball well</label>
+                <div class="form-check">
+                    <input ngModel #ball="ngModel" name="ball" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #ball="ngModel" name="ball" type="radio" class="form-check-input" value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #ball="ngModel" name="ball" type="radio" class="form-check-input" value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+
+                <label for="numberConcept">6. He climbs stairs/steps comfortably</label>
+                <div class="form-check">
+                    <input ngModel #stairs="ngModel" name="stairs" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #stairs="ngModel" name="stairs" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #stairs="ngModel" name="stairs" type="radio" class="form-check-input" value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+            </div>
+            <div class="col-6">
+                <label for="numberConcept">7. He Shows awareness of space of themselves and others during an
+                    activity</label>
+                <div class="form-check">
+                    <input ngModel #awareness="ngModel" name="awareness" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #awareness="ngModel" name="awareness" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #awareness="ngModel" name="awareness" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+                <label for="numberConcept">8. He Can hop on one foot</label>
+                <div class="form-check">
+                    <input ngModel #foot="ngModel" name="foot" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #foot="ngModel" name="foot" type="radio" class="form-check-input" value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #foot="ngModel" name="foot" type="radio" class="form-check-input" value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+
+                <label for="numberConcept">9. He can hold and use scissors with ease</label>
+                <div class="form-check">
+                    <input ngModel #scissors="ngModel" name="scissors" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #scissors="ngModel" name="scissors" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #scissors="ngModel" name="scissors" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+
+                <label for="numberConcept">10. He can thread beads comfortably </label>
+                <div class="form-check">
+                    <input ngModel #beads="ngModel" name="beads" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #beads="ngModel" name="beads" type="radio" class="form-check-input" value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #beads="ngModel" name="beads" type="radio" class="form-check-input" value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+
+                <label for="numberConcept">11. He turns pages of a book one at a time</label>
+                <div class="form-check">
+                    <input ngModel #pages="ngModel" name="pages" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #pages="ngModel" name="pages" type="radio" class="form-check-input" value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #pages="ngModel" name="pages" type="radio" class="form-check-input" value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+
+                <label for="numberConcept">12. He follows rhythm and pattern</label>
+                <div class="form-check">
+                    <input ngModel #rhythm="ngModel" name="rhythm" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #rhythm="ngModel" name="rhythm" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #rhythm="ngModel" name="rhythm" type="radio" class="form-check-input" value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+
+            </div>
+
+            <div class="col-12">
+                <br>
+                <h5>Social skills & Emotional skill</h5>
+            </div>
+            <div class="col-6">
+                <label for="numberConcept">1. He can wait for his turn</label>
+                <div class="form-check">
+                    <input ngModel #turn="ngModel" name="turn" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #turn="ngModel" name="turn" type="radio" class="form-check-input" value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #turn="ngModel" name="turn" type="radio" class="form-check-input" value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+
+                <label for="numberConcept">2. He keeps toys back in its place</label>
+                <div class="form-check">
+                    <input ngModel #place="ngModel" name="place" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #place="ngModel" name="place" type="radio" class="form-check-input" value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #place="ngModel" name="place" type="radio" class="form-check-input" value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+
+                <label for="numberConcept">3. He pleasantly greets friends and adults</label>
+                <div class="form-check">
+                    <input ngModel #pleasantly="ngModel" name="pleasantly" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #pleasantly="ngModel" name="pleasantly" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #pleasantly="ngModel" name="pleasantly" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+
+                <label for="numberConcept">4. He comfortably performs in front of familiar large group</label>
+                <div class="form-check">
+                    <input ngModel #performs="ngModel" name="performs" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #performs="ngModel" name="performs" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #performs="ngModel" name="performs" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+
+                <label for="numberConcept">5. He uses magic words appropriately and often</label>
+                <div class="form-check">
+                    <input ngModel #magic="ngModel" name="magic" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #magic="ngModel" name="magic" type="radio" class="form-check-input" value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #magic="ngModel" name="magic" type="radio" class="form-check-input" value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+
+                <label for="numberConcept">6. He can follow classroom rules/agreements</label>
+                <div class="form-check">
+                    <input ngModel #classroom="ngModel" name="classroom" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #classroom="ngModel" name="classroom" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #classroom="ngModel" name="classroom" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+            </div>
+            <div class="col-6">
+                <label for="numberConcept">7. He handles class & school properties well</label>
+                <div class="form-check">
+                    <input ngModel #properties="ngModel" name="properties" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #properties="ngModel" name="properties" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #properties="ngModel" name="properties" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+                <label for="numberConcept">8. He is conscious of names of his friends</label>
+                <div class="form-check">
+                    <input ngModel #conscious="ngModel" name="conscious" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #conscious="ngModel" name="conscious" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #conscious="ngModel" name="conscious" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+
+                <label for="numberConcept"> 9. He helps in tidying up class after an activity</label>
+                <div class="form-check">
+                    <input ngModel #tidying="ngModel" name="tidying" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #tidying="ngModel" name="tidying" type="radio" class="form-check-input"
+                        value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #tidying="ngModel" name="tidying" type="radio" class="form-check-input"
+                        value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+
+                <label for="numberConcept">10. He is aware of dining etiquettes</label>
+                <div class="form-check">
+                    <input ngModel #aware="ngModel" name="aware" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #aware="ngModel" name="aware" type="radio" class="form-check-input" value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #aware="ngModel" name="aware" type="radio" class="form-check-input" value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+
+                <label for="numberConcept">11. He is willing to share space, toys or other items</label>
+                <div class="form-check">
+                    <input ngModel #share="ngModel" name="share" type="radio" class="form-check-input"
+                        value="Independent">
+                    <label class="form-check-label" for="inlineRadio1">Independent</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #share="ngModel" name="share" type="radio" class="form-check-input" value="Emerging">
+                    <label class="form-check-label" for="inlineRadio2">Emerging</label>
+                </div>
+                <div class="form-check form-check">
+                    <input ngModel #share="ngModel" name="share" type="radio" class="form-check-input" value="Guided">
+                    <label class="form-check-label" for="inlineRadio3">Guided</label>
+                </div>
+
+            </div>
+
         </div>
         <br>
 
