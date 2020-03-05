@@ -53,19 +53,20 @@
                 <input ngModel #favShape="ngModel" name="favShape" type="text" class="form-control">
                 <br>
                 <textarea ngModel #favshape="ngModel" rows="4" class="form-control"
-                    placeholder="Write About Favorite Shape"></textarea>
+                    [ngModelOptions]="{standalone: true}" placeholder="Write About Favorite Shape"></textarea>
             </div>
             <div class="col-6">
                 <label for="favRhyme">Favorite Rhyme</label>
-                <input ngModel #favRhyme="ngModel" name="favRhyme" type="text" class="form-control">
+                <input ngModel #favRhyme="ngModel" type="text" class="form-control">
                 <br>
                 <textarea ngModel #favrhyme="ngModel" rows="4" class="form-control"
-                    placeholder="Write About Favorite Rhyme"></textarea>
+                    [ngModelOptions]="{standalone: true}" placeholder="Write About Favorite Rhyme"></textarea>
                 <label for="favStory">Favorite Story</label>
                 <input ngModel #favStory="ngModel" name="favStory" type="text" class="form-control">
                 <br>
-                <textarea ngModel #favstory="ngModel" rows="4" class="form-control"
-                    placeholder="Write About Favorite Story"></textarea>
+                <textarea ngModel #abtfavstory="ngModel" rows="4" class="form-control"
+                    [ngModelOptions]="{standalone: true}" placeholder="Write About Favorite Story"
+                    name="abtfavstory"></textarea>
             </div>
         </div>
         <br>
@@ -101,7 +102,8 @@
                     </div>
                 </div>
                 <label for="science">Anecdote/Teacher comment</label>
-                <textarea ngModel #science="ngModel" rows="4" class="form-control"></textarea>
+                <textarea ngModel #science="ngModel" rows="4" class="form-control"
+                    [ngModelOptions]="{standalone: true}"></textarea>
             </div>
             <div class="col-6">
                 <h5>Technology</h5>
@@ -111,9 +113,10 @@
                     and other tactile agents offer the child an opportunity to be an active participant in the learning
                     process.
                 </p>
-                <textarea ngModel #tech="ngModel" rows="4" class="form-control"
+                <textarea ngModel #tech="ngModel" rows="4" class="form-control" [ngModelOptions]="{standalone: true}"
                     placeholder="Activities in Technology"></textarea>
                 <textarea ngModel #techActivities="ngModel" rows="4" class="form-control"
+                    [ngModelOptions]="{standalone: true}"
                     placeholder="Write about child’s learnings or response to activities"></textarea>
 
                 <div class="row">
@@ -131,7 +134,8 @@
                     </div>
                 </div>
                 <label for="favStory">Anecdote/Teacher comment</label>
-                <textarea ngModel #technology="ngModel" rows="4" class="form-control"></textarea>
+                <textarea ngModel #technology="ngModel" rows="4" class="form-control"
+                    [ngModelOptions]="{standalone: true}"></textarea>
             </div>
             <div class="col-6">
                 <h5>Research</h5>
@@ -141,8 +145,9 @@
                     appropriate research based activities lead the child towards understanding a topic/theme in detail
                 </p>
                 <textarea ngModel #research="ngModel" rows="4" class="form-control"
-                    placeholder="Activities in research"></textarea>
+                    [ngModelOptions]="{standalone: true}" placeholder="Activities in research"></textarea>
                 <textarea ngModel #researchActivities="ngModel" rows="4" class="form-control"
+                    [ngModelOptions]="{standalone: true}"
                     placeholder="Write about child’s learnings or response to activities"></textarea>
 
                 <div class="row">
@@ -160,8 +165,10 @@
                     </div>
                 </div>
                 <label for="favStory">Anecdote/Teacher comment</label>
-                <textarea ngModel #teachercomment="ngModel" rows="4" class="form-control"></textarea>
+                <textarea ngModel #teachercomment="ngModel" rows="4" class="form-control"
+                    [ngModelOptions]="{standalone: true}"></textarea>
             </div>
+
             <div class="col-6">
                 <h5>Environment</h5>
                 <p>
@@ -171,8 +178,9 @@
                     recognize, understand and manage his emotions to be a part of this social world.
                 </p>
                 <textarea ngModel #environment="ngModel" rows="4" class="form-control"
-                    placeholder="Activities in enviroment"></textarea>
+                    [ngModelOptions]="{standalone: true}" placeholder="Activities in enviroment"></textarea>
                 <textarea ngModel #aboutEnvironment="ngModel" rows="4" class="form-control"
+                    [ngModelOptions]="{standalone: true}"
                     placeholder="Write about child’s learnings or response to activities"></textarea>
 
                 <div class="row">
@@ -190,7 +198,8 @@
                     </div>
                 </div>
                 <label for="favStory">Anecdote/Teacher comment</label>
-                <textarea ngModel #envComment="ngModel" rows="4" class="form-control"></textarea>
+                <textarea ngModel #envComment="ngModel" rows="4" class="form-control"
+                    [ngModelOptions]="{standalone: true}"></textarea>
             </div>
             <div class="col-6">
                 <h5>Arts/Language Arts</h5>
@@ -200,10 +209,12 @@
                     Self-confidence, language skills, communication skills, social and emotional skills are developed
                     through these set of activities.
                 </p>
-                <textarea ngModel #technology="ngModel" rows="5" cols="50" class="form-control">Activities done for language & art development: 
+                <textarea ngModel #technology="ngModel" rows="5" cols="50" class="form-control"
+                    [ngModelOptions]="{standalone: true}">Activities done for language & art development: 
                     Theatre, role play, music and rhythm, imaginative play, reading programs, stories, rhymes, group discussions etc. The list of opportunities are endless with language and art development activities.
                 </textarea>
                 <textarea ngModel #favstory="ngModel" rows="4" class="form-control"
+                    [ngModelOptions]="{standalone: true}"
                     placeholder="Write about child’s learnings or response to activities"></textarea>
 
                 <div class="row">
@@ -221,7 +232,8 @@
                     </div>
                 </div>
                 <label for="favStory">Anecdote/Teacher comment</label>
-                <textarea ngModel #favstory="ngModel" rows="4" class="form-control"></textarea>
+                <textarea ngModel #favstory="ngModel" rows="4" class="form-control"
+                    [ngModelOptions]="{standalone: true}"></textarea>
             </div>
             <div class="col-6">
                 <h5>Manipulatives</h5>
@@ -233,8 +245,9 @@
                     to him.
                 </p>
                 <textarea ngModel #manipulatives="ngModel" rows="5" cols="50" class="form-control"
-                    placeholder="Activities in manipulatives"></textarea>
+                    [ngModelOptions]="{standalone: true}" placeholder="Activities in manipulatives"></textarea>
                 <textarea ngModel #aboutManipulatives="ngModel" rows="4" class="form-control"
+                    [ngModelOptions]="{standalone: true}"
                     placeholder="Write about child’s learnings or response to activities"></textarea>
 
                 <div class="row">
@@ -252,7 +265,8 @@
                     </div>
                 </div>
                 <label for="favStory">Anecdote/Teacher comment</label>
-                <textarea ngModel #manipulativeComment="ngModel" rows="4" class="form-control"></textarea>
+                <textarea ngModel #manipulativeComment="ngModel" rows="4" class="form-control"
+                    [ngModelOptions]="{standalone: true}"></textarea>
             </div>
         </div>
         <br>
@@ -268,8 +282,10 @@
                     body movements with fingers, wrist, hands, feet and toes.
                 </p>
                 <textarea ngModel #psychomotor="ngModel" rows="4" class="form-control"
+                    [ngModelOptions]="{standalone: true}"
                     placeholder="List out Activities done in Motor skills development"></textarea>
                 <textarea ngModel #abtpsychomotor="ngModel" rows="4" class="form-control"
+                    [ngModelOptions]="{standalone: true}"
                     placeholder="Write about child’s response to activities done in fine and gross motor development and child’s response to it."></textarea>
                 <div class="row">
                     <div class="col-12">
@@ -286,7 +302,8 @@
                     </div>
                 </div>
                 <label for="favStory">Anecdote/Teacher comment</label>
-                <textarea ngModel #psychomotorcomment="ngModel" rows="4" class="form-control"></textarea>
+                <textarea ngModel #psychomotorcomment="ngModel" rows="4" class="form-control"
+                    [ngModelOptions]="{standalone: true}"></textarea>
             </div>
 
         </div>
@@ -302,8 +319,9 @@
                     this space concede the child to understand, manage and express his emotions rightfully.
                 </p>
                 <textarea ngModel #affective="ngModel" rows="4" class="form-control"
-                    placeholder="List out Activities done in PSED"></textarea>
+                    [ngModelOptions]="{standalone: true}" placeholder="List out Activities done in PSED"></textarea>
                 <textarea ngModel #abtaffective="ngModel" rows="4" class="form-control"
+                    [ngModelOptions]="{standalone: true}"
                     placeholder="Write about child’s response to activities done in personal, social and emotional development"></textarea>
                 <div class="row">
                     <div class="col-12">

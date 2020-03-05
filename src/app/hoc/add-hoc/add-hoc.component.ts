@@ -10,8 +10,7 @@ import { NgForm } from '@angular/forms';
 })
 export class AddHocComponent implements OnInit {
 
-  constructor(
-    public activeModal: NgbActiveModal, private db: AngularFirestore) { }
+  constructor(public activeModal: NgbActiveModal, private db: AngularFirestore) { }
 
   addHoc(hoc: NgForm) {
     let hocDetails = hoc.form.value;
